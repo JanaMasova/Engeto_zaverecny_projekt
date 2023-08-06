@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.wrapper,
+.hero-container h1 {
+  padding: 1.5rem;
+}
+
+.wrapper {
+  margin: 0;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #004f71;
+  height: 70px;
+  position: relative;
+}
+
+.nav-item-wrapper{
+  display: none;
+  position: absolute;
+  top: 70px;
+  background-color: #004f71;
+  color: #fff;
+  width: 100%;
+}
+
+
+.hamburger-icon,
+.fa-moon,
+.fa-sun {
+  display: block;
+  color: #fff;
+  font-size: 23px;
+  margin: 20px;
+}
+
+.nav-list li {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+.nav-item {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+  }
+
+.hero-container {
+  min-height: calc(100vh - 70px);
+  background-image: url(images/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-container h1 {
+  margin: 0;
+  background: #004f71;
+  color: #fff;
+  font-size: 30px;
+  width: min-content;
+  text-align: left;
+  position: absolute;
+  bottom: 2rem;
+  right: 0;
+  text-transform: uppercase;
+}
+
+.activities-container {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.list {
+  text-align: left;
+}
+
+.list-item {
+  margin: 0.5rem;
+  list-style-type: square;
+}
+
+.team-members-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-photo {
+  width: 80%;
+  object-fit: contain;
+  margin: 0 auto;
+  transition: 0.15s;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  max-width: 120px;
+}
+
+#form {
+  background: #004f71;
+  color: #fff;
+}
+
+.form-line {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-item {
+  width: 100%;
+  padding: 6px 10px;
+  margin: 8px 0;
+}
+
+.valid {
+  color: greenyellow;
+}
+.invalid {
+  color: red;
+}
+
+.button {
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  color: #004f71;
+  background-color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.arrow {
+  font-size: 35px;
+  margin: 60px 10px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  color: rgb(70, 159, 243);
+}
+
+.hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.footer-section {
+  background-color: #333333;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-section h6 {
+  margin: 0;
+  padding: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 5.5rem 15%;
+  }
+
+  header{
+    top: 0;
+    z-index: 1;
+    font-weight: bold;  
+    position: sticky;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .dark-icon{
+    width: 65px;
+  }
+
+  .fa-moon,
+  .fa-sun{
+    cursor: pointer;
+    margin: 0;
+  }
+
+  .nav-item-wrapper {
+    margin: 0 15%;
+    padding: 0.5rem 1.5rem;
+    position: static;
+  } 
+
+  .nav-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-list li{
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-item{
+    padding: 6px;
+  }
+
+  .hero-container {
+    height: calc(100vh - 70px);
+  }
+
+  .hero-container h1 {
+    font-size: 68px;
+    padding: 3rem 15% 3rem 5%;
+  }
+
+  .team-members-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+      }
+
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    flex-basis: 30%
+;  }
+
+  .member-paragraph{
+    margin: 1rem 5%;
+  }
+
+  .form-container {
+    margin: 0 auto;
+    width: 35%;
+  }
+
+  .arrow {
+    font-size: 50px;
+    margin: 60px 40px;
+
+  }
+}
+
+@media (min-width: 600px){
+    header nav {
+        display: block !important;       
+    }
+}
